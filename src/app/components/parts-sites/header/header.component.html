@@ -11,12 +11,13 @@
         <li><a [routerLink]="['cards']">Карты</a></li>
         <li><a [routerLink]="['deposits']">Депозиты</a></li>
       </ul>
+      <section class="rate-container">
+        <ul class="currency-rates">
+          <li class="currency-rate" *ngFor="let item of currencyRates">{{item.ccy}} {{item.buy | number: '1.2-2'}} - {{item.sale | number: '1.2-2'}}</li>
+        </ul>
+      </section>
+      <button class="auth">ABank24 WEB</button>
     </div>
-    <section class="rate-container">
-      <ul>
-        <li *ngFor="let item of currencyRates">{{item.buy | number: '1.2-2'}} - {{item.sale | number: '1.2-2'}}</li>
-      </ul>
-    </section>
-    <button class="auth">ABank24 WEB</button>
+
   </div>
 </header>
